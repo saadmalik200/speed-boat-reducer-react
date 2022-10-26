@@ -35,4 +35,8 @@ Your reducer function should be able to do the following actions:
 Show the current speed of the boat to the user
 Show also buttons for the different actions
 
+## Image
+
+![](./src/images/Screenshot%20from%202022-10-26%2023-24-05.png)
+
 **BONUS CHALLENGE** Show distance travelled
