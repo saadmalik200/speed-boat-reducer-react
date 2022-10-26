@@ -74,7 +74,7 @@ function App() {
   console.log(state);
 
   return (
-    <div className="relative background flex bg-gray-600 justify-center items-center h-screen">
+    <div className="relative background flex justify-center items-center h-screen">
       <div className="  flex flex-col items-center justify-between">
         <div className="flex gap-[2rem]">
           <p className="absolute top-[5rem] right-[27rem] border-2 p-5 text-[1.5rem] bg-cyan-500">
