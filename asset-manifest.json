@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/speed-boat-reducer-react/static/css/main.5ef1f34a.css",
-    "main.js": "/speed-boat-reducer-react/static/js/main.b2277ff9.js",
+    "main.js": "/speed-boat-reducer-react/static/js/main.584b886f.js",
     "static/media/boat.jpg": "/speed-boat-reducer-react/static/media/boat.5c5c2a2f54f60646ef56.jpg",
     "index.html": "/speed-boat-reducer-react/index.html",
     "main.5ef1f34a.css.map": "/speed-boat-reducer-react/static/css/main.5ef1f34a.css.map",
-    "main.b2277ff9.js.map": "/speed-boat-reducer-react/static/js/main.b2277ff9.js.map"
+    "main.584b886f.js.map": "/speed-boat-reducer-react/static/js/main.584b886f.js.map"
   },
   "entrypoints": [
     "static/css/main.5ef1f34a.css",
-    "static/js/main.b2277ff9.js"
+    "static/js/main.584b886f.js"
   ]
 }
