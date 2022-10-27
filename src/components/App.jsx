@@ -6,13 +6,16 @@ function App() {
     gear: 0,
     speed: 0,
   };
-  const random = Math.random() < 0.5;
+  const random = Math.random() > 0.5;
 
   const reducer = (state, action) => {
     switch (action.type) {
       case "onButton":
         if (random) {
           return { ...state, ignition: true };
+        }
+        if (state.ignition) {
+          return { ...state, gear: 0, ignition: false };
         } else {
           return state;
         }
@@ -32,35 +35,19 @@ function App() {
         }
 
       case "speedUp":
-        if (state.ignition && state.gear > 0) {
-          if (state.gear === 1) {
-            return { ...state, speed: +10 };
-          } else if (state.gear === 2 && state.speed < 40) {
-            return { ...state, speed: state.speed + 10 };
-          } else if (state.gear === 3 && state.speed < 70) {
-            return { ...state, speed: state.speed + 20 };
-          } else if (state.gear === 4 && state.speed < 120) {
-            return { ...state, speed: state.speed + 30 };
-          } else if (state.gear === 5 && state.speed < 300) {
-            return { ...state, speed: state.speed + 40 };
-          } else {
-            return state;
-          }
-        } else if (state.ignition && state.gear < 0) {
-          if (state.gear === -1 && state.speed === 0) {
-            return { ...state, speed: state.speed + 10 };
-          } else if (state.gear === -2 && state.speed === 0) {
-            return { ...state, speed: state.speed + 20 };
-          } else {
-            return state;
-          }
+        if (state.ignition && state.gear !== 0) {
+          return { ...state, speed: state.speed + 10 * state.gear };
         } else {
           return state;
         }
 
       case "speedDown":
-        if (state.ignition && state.gear !== 0 && state.speed > 0) {
-          return { ...state, speed: state.speed - 5 };
+        if (state.ignition && state.gear > 0 && state.speed > 0) {
+          return { ...state, speed: state.speed - 10 };
+        }
+
+        if (state.ignition && state.gear <= 0 && state.speed < 0) {
+          return { ...state, speed: state.speed + 10 };
         } else {
           return state;
         }
